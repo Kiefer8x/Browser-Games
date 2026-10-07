@@ -53,6 +53,43 @@ Double-click `index.html` in your file explorer to open it directly in Google Ch
 
 ---
 
+## 🗄️ Synology NAS Deployment
+
+Because this repository consists of pure static web assets, it uses virtually zero CPU and less than **15 MB of RAM** on your Synology NAS.
+
+### Method 1: Synology Container Manager (Recommended)
+
+1. **Copy/Upload** this repository to your Synology NAS (e.g. into `/volume1/docker/browser-games`).
+2. Open **Container Manager** on DSM.
+3. Go to **Project** > **Create**:
+   - **Project Name**: `cyber-arcade`
+   - **Path**: Select `/docker/browser-games`
+   - **Source**: Select *Use existing docker-compose.yml*
+4. Click **Next** > **Done**.
+5. Once started, access your arcade at:
+   ```text
+   http://<YOUR-SYNOLOGY-IP>:8085
+   ```
+   *(e.g., `http://192.168.0.4:8085` or via Tailscale IP)*
+
+> [!TIP]
+> Because `docker-compose.yml` mounts the folder directly, any new games you add to the `games/` folder on your NAS will be available instantly without restarting or rebuilding the container!
+
+### Method 2: Synology Web Station (No Docker needed)
+
+1. Open **Package Center** and install **Web Station** if not already installed.
+2. In File Station, copy this repository folder into your NAS's `web` shared folder (e.g., `/volume1/web/arcade`).
+3. Open **Web Station** > **Web Service** > **Create**:
+   - **Service Type**: Static website
+   - **Name**: `Cyber Arcade`
+   - **Document Root**: `/web/arcade`
+4. Under **Web Portal** > **Create**:
+   - Select the `Cyber Arcade` service.
+   - Choose your preferred port (e.g. `8085`) or assign a subdomain/hostname.
+5. Save and open `http://<YOUR-SYNOLOGY-IP>:8085`.
+
+---
+
 ## 🌐 Deploy to GitHub Pages (1-Click)
 
 1. Push this repository to your GitHub account:

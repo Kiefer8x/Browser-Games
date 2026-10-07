@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  cyber-arcade:
+    image: nginx:alpine
+    container_name: cyber-arcade
+    restart: unless-stopped
+    ports:
+      - "8085:80"
+    volumes:
+      # Mount directory directly so changes & new games appear instantly
+      - ./:/usr/share/nginx/html:ro
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
