@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Serious Shooter
+Comment=3D FPS akin to Serious Sam
+StartupNotify=false
+Exec=seriousshooter
+Icon=seriousshooter
+Terminal=false
+Type=Application
+Categories=Game;ArcadeGame;KidsGame;Graphics

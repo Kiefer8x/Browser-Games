@@ -122,6 +122,128 @@
             path: 'games/2048/index.html',
             description: 'Addictive numbered tile sliding and merging puzzle with undo support and touch swipe controls.',
             highScoreKey: 'arcade_2048_hi'
+        },
+        // GitHub Web Games Collection
+        {
+            id: 'hextris',
+            title: 'Hextris',
+            category: 'puzzle',
+            badge: 'Hexagonal Puzzle',
+            mode: '1 Player',
+            icon: '⬡',
+            path: 'games/hextris/index.html',
+            description: 'Fast-paced hexagonal puzzle game inspired by Tetris. Rotate the hexagon to match 3 or more blocks of the same color.',
+            highScoreKey: null
+        },
+        {
+            id: 'clumsy-bird',
+            title: 'Clumsy Bird',
+            category: 'action',
+            badge: 'MelonJS Arcade',
+            mode: '1 Player',
+            icon: '🐦',
+            path: 'games/clumsy-bird/index.html',
+            description: 'Famous open-source Flappy Bird remake built with the MelonJS HTML5 game engine.',
+            highScoreKey: null
+        },
+        {
+            id: 'adarkroom',
+            title: 'A Dark Room',
+            category: 'puzzle',
+            badge: 'Text RPG Survival',
+            mode: '1 Player',
+            icon: '🔥',
+            path: 'games/adarkroom/index.html',
+            description: 'The award-winning minimalist text adventure and survival RPG by Doublespeak Games. Stoke the fire, build your village.',
+            highScoreKey: null
+        },
+        {
+            id: 'untrusted',
+            title: 'Untrusted: Dr. Eval',
+            category: 'puzzle',
+            badge: 'Code Rogue-like',
+            mode: '1 Player',
+            icon: '💻',
+            path: 'games/untrusted/index.html',
+            description: 'A unique rogue-like adventure where you must alter the underlying JavaScript game code to solve puzzles and escape.',
+            highScoreKey: null
+        },
+        {
+            id: 'original-2048',
+            title: '2048 (Original Edition)',
+            category: 'puzzle',
+            badge: 'Original Classic',
+            mode: '1 Player',
+            icon: '🔢',
+            path: 'games/original-2048/index.html',
+            description: 'The original legendary 2048 puzzle game created by Gabriele Cirulli that took the world by storm.',
+            highScoreKey: null
+        },
+        {
+            id: 'serious-shooter',
+            title: 'Serious Shooter',
+            category: 'action',
+            badge: '3D FPS Arena',
+            mode: '1 Player',
+            icon: '🎯',
+            path: 'games/serious-shooter/index.html',
+            description: 'Fast 3D first-person arena shooter running in WebGL with retro polygon styling.',
+            highScoreKey: null
+        },
+        {
+            id: 'pory-drive',
+            title: 'PoryDrive',
+            category: 'arcade',
+            badge: '3D Racing',
+            mode: '1 Player',
+            icon: '🏎️',
+            path: 'games/pory-drive/index.html',
+            description: 'Low-poly 3D arcade driving experience featuring responsive acceleration and drift physics.',
+            highScoreKey: null
+        },
+        {
+            id: 'tux-vs-dragon',
+            title: 'Tux vs Dragon',
+            category: 'action',
+            badge: '3D Boss Battle',
+            mode: '1 Player',
+            icon: '🐉',
+            path: 'games/tux-vs-dragon/index.html',
+            description: 'Epic 3D fantasy encounter between Tux and a fire-breathing dragon running in WebAssembly.',
+            highScoreKey: null
+        },
+        {
+            id: 'tuxocide',
+            title: 'Tuxocide',
+            category: 'action',
+            badge: '3D Top-Down Shooter',
+            mode: '1 Player',
+            icon: '🐧',
+            path: 'games/tuxocide/index.html',
+            description: 'Action-packed 3D top-down shooter combat arena starring Tux with bullet and grenade mechanics.',
+            highScoreKey: null
+        },
+        {
+            id: 'tux-scape',
+            title: 'TuxScape',
+            category: 'arcade',
+            badge: '3D Adventure Quest',
+            mode: '1 Player',
+            icon: '🛡️',
+            path: 'games/tux-scape/index.html',
+            description: 'Retro 3D medieval questing environment inspired by classic early 2000s MMORPGs.',
+            highScoreKey: null
+        },
+        {
+            id: 'ai-generated-game',
+            title: 'AI Generated Realm',
+            category: 'action',
+            badge: '3D AI Realm',
+            mode: '1 Player',
+            icon: '🤖',
+            path: 'games/ai-generated-game/index.html',
+            description: 'Experimental 3D game sandbox synthesized and built with AI generation pipelines.',
+            highScoreKey: null
         }
     ];
 

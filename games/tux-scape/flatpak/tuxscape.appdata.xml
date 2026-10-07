@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>com.voxdsp.TuxScape</id>
+	<metadata_license>CC-BY-4.0</metadata_license>
+	<project_license>GPL-2.0-only</project_license>
+	<developer_name>James William Fletcher</developer_name>
+	<launchable type="desktop-id">com.voxdsp.TuxScape.desktop</launchable>
+	<name>TuxScape</name>
+	<summary>Mythical adventure as Tux!</summary>
+	<description>
+		<p>Inspired by the famous game Run-Escape.</p>
+		<p>All your stats are shown in the title bar. Smash presents and pots to get health drops, I would start on Zombies, Green Flies, Baby Dragons, Skulls and Whirlwinds. Check the readme on github.com/mrbid/TuxScape for more info.</p>
+		<p>Mouse locks when you click on the window, press ESCAPE to unlock the mouse.</p>
+		<ul>
+			<li>Left Click = Attack</li>
+			<li>Right Click = Target Weapon / Engage Jet Pack</li>
+			<li>Mouse Scroll = Zoom in/out</li>
+			<li>W,A,S,D / Arrow Keys = Move</li>
+			<li>L-SHIFT / R-CTRL = Sprint/Fast</li>
+			<li>Space = Jet Pack</li>
+			<li>1-9 = Weapon Change</li>
+			<li>C = Toggle between First and Third person</li>
+			<li>V / MOUSE4 = Toggle between stickey/toggle mouse clicks (good for afk)</li>
+		</ul>
+	</description>
+    <screenshots>
+		<screenshot type="default">
+			<image>https://notabug.org/Vandarin/TuxScape/raw/master/screenshot.png</image>
+			<caption>Tux with his starter knife and groot punching bag.</caption>
+		</screenshot>
+	</screenshots>
+	<url type="homepage">https://github.com/mrbid/TuxScape</url>
+	<releases>
+		<release version="1.2.5" date="2024-06-08" />
+	</releases>
+	<content_rating type="oars-1.0" />
+</component>

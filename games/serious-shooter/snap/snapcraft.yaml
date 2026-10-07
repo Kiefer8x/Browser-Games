@@ -1,0 +1,54 @@
+name: seriousshooter
+base: core22
+version: '1.2'
+license: GPL-2.0-only
+summary: 3D FPS approved by Uncle Sam
+description: |
+  25 Different Enemies, 3 Weapons, GOD MODE!
+
+  ... and two secret hidden weapons bound to two keys ;
+
+  Mouse locks when you click on the window, press ESCAPE to unlock the mouse.
+
+  W,A,S,D / Arrow Keys = Move
+  L-SHIFT / R-CTRL = Sprint
+  Left Click = Shoot
+  Right Click = Zoom
+  Mouse Scroll = Change Weapon
+  F = FPS to console
+  N = New Game and Seed
+
+grade: stable
+confinement: strict
+
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+  - build-on: [arm64]
+    build-for: [arm64]
+  - build-on: [armhf]
+    build-for: [armhf]
+
+apps:
+  seriousshooter:
+    extensions: [gnome]
+    command: seriousshooter
+    plugs:
+    - desktop
+    - desktop-legacy
+    - gsettings
+    - opengl
+    - wayland
+    - x11
+
+parts:
+  seriousshooter:
+    source: https://github.com/mrbid/seriousshooter
+    source-type: git
+    plugin: make
+    source-subdir: snap
+    build-packages:
+    - libglfw3-dev
+    stage-packages:
+    - libglfw3
+    - libgles2
