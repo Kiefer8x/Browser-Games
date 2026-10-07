@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Neon Tetris - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">TETRIS</h1>
+            <p class="game-subtitle">CYBER ARCADE EDITION</p>
+        </div>
+
+        <div class="game-layout">
+            <!-- Left Panel (Hold) -->
+            <div class="side-panel">
+                <div class="stat-card">
+                    <div class="stat-label">HOLD (C)</div>
+                    <canvas id="hold-canvas"></canvas>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">SCORE</div>
+                    <div class="stat-value" id="score-val">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">HIGH SCORE</div>
+                    <div class="stat-value" id="high-score-val">0</div>
+                </div>
+            </div>
+
+            <!-- Central Game Area -->
+            <div class="canvas-wrapper">
+                <canvas id="tetris-canvas"></canvas>
+                <div id="overlay-screen" class="overlay-screen">
+                    <h2 id="overlay-title" class="overlay-title start">NEON TETRIS</h2>
+                    <p id="overlay-subtitle" class="overlay-score">Clear lines and score points</p>
+                    <button id="start-btn" class="btn">START GAME</button>
+                </div>
+            </div>
+
+            <!-- Right Panel (Next, Level, Lines) -->
+            <div class="side-panel">
+                <div class="stat-card">
+                    <div class="stat-label">NEXT</div>
+                    <canvas id="next-canvas"></canvas>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">LEVEL</div>
+                    <div class="stat-value" id="level-val">1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">LINES</div>
+                    <div class="stat-value" id="lines-val">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> Move</span>
+            <span><kbd>&uarr;</kbd> Rotate</span>
+            <span><kbd>&darr;</kbd> Soft Drop</span>
+            <span><kbd>Space</kbd> Hard Drop</span>
+            <span><kbd>C</kbd> Hold</span>
+            <span><kbd>P</kbd> Pause</span>
+        </div>
+
+        <!-- Mobile on-screen controls -->
+        <div class="mobile-controls">
+            <button class="mob-btn" data-action="left">&larr;</button>
+            <button class="mob-btn" data-action="rotate">&#8635;</button>
+            <button class="mob-btn" data-action="right">&rarr;</button>
+            <button class="mob-btn" data-action="down">&darr;</button>
+            <button class="mob-btn" data-action="drop">&#8681; Drop</button>
+            <button class="mob-btn" data-action="hold">Hold</button>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Cyber Arcade — Open-Source Browser Games</title>
+    <meta name="description" content="A curated collection of fast, open-source, retro and classic arcade browser games ready to play locally or hosted anywhere.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated particle starfield canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Background glowing ambient lights -->
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="glow-blob blob-3"></div>
+
+    <div class="app-container">
+        <!-- Navigation Header -->
+        <header class="header">
+            <a href="#" class="logo-group">
+                <span class="logo-icon">🕹️</span>
+                <span class="logo-text">CYBER ARCADE</span>
+                <span class="logo-tag">OPEN SOURCE</span>
+            </a>
+            <div class="header-actions">
+                <button id="btn-surprise" class="btn-surprise" title="Launch a random game">
+                    <span>🎲</span> Surprise Me
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span id="games-count-badge">9 Games Ready to Play</span>
+            </div>
+            <h1 class="hero-title">
+                The Ultimate Open-Source <span>Browser Games Hub</span>
+            </h1>
+            <p class="hero-subtitle">
+                Play legendary retro arcade classics directly in your browser. Zero downloads, zero build steps, completely offline-capable, and GitHub Pages ready.
+            </p>
+        </section>
+
+        <!-- Search & Category Filters -->
+        <section class="controls-bar">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" class="search-input" placeholder="Search games by name or genre...">
+            </div>
+
+            <div class="filter-chips">
+                <button class="chip-btn active" data-filter="all">All Games</button>
+                <button class="chip-btn" data-filter="arcade">Arcade Classics</button>
+                <button class="chip-btn" data-filter="action">Action & Reflex</button>
+                <button class="chip-btn" data-filter="puzzle">Puzzle & Logic</button>
+                <button class="chip-btn" data-filter="fav">Favorites ❤️</button>
+            </div>
+        </section>
+
+        <!-- Games Catalog Grid -->
+        <main class="games-grid" id="games-grid">
+            <!-- Dynamically populated by js/portal.js -->
+        </main>
+
+        <!-- Architecture & Open-Source Guide Section -->
+        <section class="info-section">
+            <h2 class="info-title">Engineered for <span>Simplicity & Fun</span></h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-heading">Zero Build Steps</h3>
+                    <p class="feature-text">
+                        Pure Vanilla HTML5, CSS3, and modern ES6 JavaScript. No heavy npm build steps or complex node bundles required to run.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔊</span>
+                    <h3 class="feature-heading">Synthesized Web Audio</h3>
+                    <p class="feature-text">
+                        Every retro sound effect is synthesized dynamically using the Web Audio API without relying on external media files.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🌐</span>
+                    <h3 class="feature-heading">100% Offline & Portable</h3>
+                    <p class="feature-text">
+                        Host it on GitHub Pages, Cloudflare Pages, your Synology NAS, or play directly via static local files.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🚀</span>
+                    <h3 class="feature-heading">Fork & Add Games Easily</h3>
+                    <p class="feature-text">
+                        Drop any self-contained web game folder into <code>games/&lt;name&gt;</code> and register it in <code>js/portal.js</code> in seconds.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Open Source Browser Games Hub • Built with Vanilla Web Technologies</p>
+            <p>Ready to deploy on GitHub Pages or self-host</p>
+        </footer>
+    </div>
+
+    <!-- Theatrical Game Player Modal -->
+    <div id="player-modal" class="player-modal">
+        <div class="player-box">
+            <div class="player-header">
+                <div id="modal-title" class="player-header-title">Game Title</div>
+                <div class="player-controls">
+                    <button id="btn-fullscreen" class="btn-icon" title="Toggle Fullscreen">⛶</button>
+                    <button id="btn-newtab" class="btn-icon" title="Open in New Tab">↗</button>
+                    <button id="btn-close-modal" class="btn-icon" title="Close (Esc)">✕</button>
+                </div>
+            </div>
+            <div class="player-frame-wrapper">
+                <iframe id="player-frame" class="player-frame" src="about:blank" allow="autoplay; fullscreen"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/portal.js"></script>
+</body>
+</html>

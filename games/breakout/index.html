@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Breakout - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="breakout.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">BREAKOUT</h1>
+            <p class="game-subtitle">CYBER BRICK BREAKER</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val" style="color: #fff;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>HI-SCORE</span>
+                <span id="high-score-val" style="color: #ffee00;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>BALLS</span>
+                <span id="lives-val" style="color: #00ff88;">3</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="breakout-canvas"></canvas>
+            <div id="overlay-screen" class="overlay-screen">
+                <h2 id="overlay-title" class="overlay-title start">BREAKOUT</h2>
+                <p id="overlay-subtitle" class="overlay-score">Smash all neon bricks & catch power-ups</p>
+                <button id="start-btn" class="btn">LAUNCH BALL</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>Mouse / Touch</kbd> or <kbd>&larr;</kbd><kbd>&rarr;</kbd> Move Paddle</span>
+            <span><kbd>Space</kbd> Start / Restart</span>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="breakout.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Asteroids - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asteroids.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">ASTEROIDS</h1>
+            <p class="game-subtitle">DEEP SPACE VECTOR SURVIVAL</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val" style="color: #fff;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>HI-SCORE</span>
+                <span id="high-score-val" style="color: #ffdd00;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>SHIPS LEFT</span>
+                <span id="lives-val" style="color: #00ff88;">3</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="asteroids-canvas"></canvas>
+            <div id="overlay-screen" class="overlay-screen">
+                <h2 id="overlay-title" class="overlay-title start">ASTEROIDS</h2>
+                <p id="overlay-subtitle" class="overlay-score">Blast space rocks & survive the drift</p>
+                <button id="start-btn" class="btn">LAUNCH SHIP</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> Rotate</span>
+            <span><kbd>&uarr;</kbd> Thrust</span>
+            <span><kbd>Space</kbd> Fire Blasters</span>
+            <span><kbd>Shift</kbd> Hyperspace</span>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="mob-btn" id="mob-left">&larr; Turn</button>
+            <button class="mob-btn" id="mob-thrust">&#9650; Thrust</button>
+            <button class="mob-btn" id="mob-fire">&#9889; Fire</button>
+            <button class="mob-btn" id="mob-right">Turn &rarr;</button>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="asteroids.js"></script>
+</body>
+</html>

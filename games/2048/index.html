@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>2048 Neon - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="2048.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">2048 NEON</h1>
+            <p class="game-subtitle">SLIDE & MERGE PUZZLE</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>BEST</span>
+                <span id="high-score-val">0</span>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button id="undo-btn" class="btn-secondary">↺ Undo (Z)</button>
+            <button id="restart-btn" class="btn-secondary">New Game</button>
+        </div>
+
+        <div class="grid-board" id="grid-board">
+            <div id="overlay-screen" class="overlay-screen hidden">
+                <h2 id="overlay-title" class="overlay-title">GAME OVER</h2>
+                <p id="overlay-subtitle">Final Score: 0</p>
+                <button id="overlay-btn" class="btn">TRY AGAIN</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&uarr;</kbd><kbd>&darr;</kbd><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>Swipe</kbd> Slide</span>
+            <span><kbd>Z</kbd> Undo</span>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="2048.js"></script>
+</body>
+</html>

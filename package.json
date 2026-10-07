@@ -1,0 +1,25 @@
+{
+  "name": "browser-games-hub",
+  "version": "1.0.0",
+  "description": "A curated collection of retro and arcade browser games playable offline or hosted anywhere.",
+  "scripts": {
+    "start": "npx -y serve . -l 3000",
+    "dev": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "browser-games",
+    "arcade",
+    "retro-games",
+    "tetris",
+    "snake",
+    "space-invaders",
+    "asteroids",
+    "pong",
+    "pacman",
+    "breakout",
+    "minesweeper",
+    "2048",
+    "html5-games"
+  ],
+  "license": "MIT"
+}

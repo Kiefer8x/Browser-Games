@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="minesweeper.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">MINESWEEPER</h1>
+            <p class="game-subtitle">NEON LOGIC GRID</p>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <label style="font-size: 0.85rem; color: var(--text-dim);">DIFFICULTY:</label>
+            <select id="diff-select" class="diff-select">
+                <option value="beginner">Beginner (9x9, 10 Mines)</option>
+                <option value="intermediate">Intermediate (16x16, 40 Mines)</option>
+                <option value="expert">Expert (16x30, 99 Mines)</option>
+            </select>
+        </div>
+
+        <div class="board-frame">
+            <div class="status-header">
+                <div class="lcd-display" id="mines-lcd">010</div>
+                <button class="face-btn" id="face-btn">😎</button>
+                <div class="lcd-display" id="timer-lcd">000</div>
+            </div>
+
+            <div class="mine-grid" id="mine-grid"></div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>Left Click</kbd> Reveal Cell</span>
+            <span><kbd>Right Click</kbd> Toggle Flag</span>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="minesweeper.js"></script>
+</body>
+</html>

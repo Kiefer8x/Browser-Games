@@ -1,0 +1,195 @@
+:root {
+    --bg-dark: #0a0b10;
+    --panel-bg: rgba(18, 22, 36, 0.85);
+    --border-color: rgba(255, 119, 0, 0.25);
+    --neon-orange: #ff7700;
+    --neon-blue: #00f0ff;
+    --neon-pink: #ff007f;
+    --neon-green: #00ff88;
+    --text-primary: #f0f6fc;
+    --text-dim: #8b949e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 20%, rgba(255, 119, 0, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.game-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 650px;
+    width: 100%;
+}
+
+.game-header {
+    text-align: center;
+}
+
+.game-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #ff7700, #ffee00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 119, 0, 0.3);
+}
+
+.game-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.stat-pill {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 0.45rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    backdrop-filter: blur(8px);
+}
+
+.stat-pill span {
+    color: var(--neon-orange);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    border: 2px solid rgba(255, 119, 0, 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 30px rgba(255, 119, 0, 0.2),
+        0 10px 40px rgba(0, 0, 0, 0.7);
+    background: #030409;
+}
+
+#breakout-canvas {
+    display: block;
+    background: #030409;
+}
+
+.overlay-screen {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 4, 9, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.overlay-screen.hidden {
+    display: none;
+}
+
+.overlay-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.overlay-title.gameover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 16px rgba(255, 0, 127, 0.6);
+}
+
+.overlay-title.start {
+    color: var(--neon-orange);
+    text-shadow: 0 0 16px rgba(255, 119, 0, 0.6);
+}
+
+.overlay-score {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff7700, #ff0055);
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(255, 119, 0, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(255, 119, 0, 0.6);
+}
+
+.controls-hint {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    display: flex;
+    gap: 1.2rem;
+}
+
+.controls-hint span kbd {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--neon-orange);
+}

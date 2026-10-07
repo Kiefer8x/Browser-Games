@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Pac-Man - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pacman.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">PAC-MAN</h1>
+            <p class="game-subtitle">CYBER MAZE CHASER</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val" style="color: #fff;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>HI-SCORE</span>
+                <span id="high-score-val" style="color: #ffee00;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>LIVES</span>
+                <div class="lives-container" id="lives-box"></div>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="pacman-canvas"></canvas>
+            <div id="overlay-screen" class="overlay-screen">
+                <h2 id="overlay-title" class="overlay-title start">PAC-MAN</h2>
+                <p id="overlay-subtitle" class="overlay-score">Eat pellets & avoid the cyber ghosts</p>
+                <button id="start-btn" class="btn">START RUN</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&uarr;</kbd><kbd>&darr;</kbd><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>WASD</kbd> Navigate</span>
+        </div>
+
+        <div class="dpad">
+            <button class="dpad-btn up" data-dir="up">&uarr;</button>
+            <button class="dpad-btn left" data-dir="left">&larr;</button>
+            <button class="dpad-btn right" data-dir="right">&rarr;</button>
+            <button class="dpad-btn down" data-dir="down">&darr;</button>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="pacman.js"></script>
+</body>
+</html>
