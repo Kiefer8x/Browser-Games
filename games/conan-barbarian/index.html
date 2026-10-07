@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Conan: Hyborian Slayer - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="conan.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">CONAN: HYBORIAN SLAYER</h1>
+            <p class="game-subtitle">RETRO HACK & SLASH PLATFORMER</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="bars-group">
+                <div class="bar-wrapper">
+                    <span>HP</span>
+                    <div class="bar-outer">
+                        <div id="hp-fill" class="hp-fill"></div>
+                    </div>
+                </div>
+                <div class="bar-wrapper">
+                    <span>RAGE</span>
+                    <div class="bar-outer">
+                        <div id="rage-fill" class="rage-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val" style="color: #fff;">0</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="conan-canvas"></canvas>
+            <div id="overlay-screen" class="overlay-screen">
+                <h2 id="overlay-title" class="overlay-title victory">HYBORIAN SLAYER</h2>
+                <p id="overlay-subtitle" style="color: var(--text-dim);">Fight through ruins of Stygia and vanquish the Warlord</p>
+                <button id="start-btn" class="btn">BEGIN QUEST</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>A</kbd>/<kbd>D</kbd> Run</span>
+            <span><kbd>&uarr;</kbd> or <kbd>W</kbd> Jump</span>
+            <span><kbd>Space</kbd> or <kbd>J</kbd> Sword Slash</span>
+            <span><kbd>C</kbd> or <kbd>K</kbd> Berserk Whirlwind (When Rage Full)</span>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="mob-btn" id="mob-left">&larr; Run</button>
+            <button class="mob-btn" id="mob-jump">&#9650; Jump</button>
+            <button class="mob-btn attack" id="mob-attack">&#9876; Slash</button>
+            <button class="mob-btn" id="mob-right">Run &rarr;</button>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="conan.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ services:
     container_name: cyber-arcade
     restart: unless-stopped
     ports:
-      - "8085:80"
+      - "8090:80"
     volumes:
       # Mount directory directly so changes & new games appear instantly
       - ./:/usr/share/nginx/html:ro

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Super Retro Jump - Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="platformer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">SUPER RETRO JUMP</h1>
+            <p class="game-subtitle">CLASSIC 2D PLATFORMER</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-pill">
+                <span>SCORE</span>
+                <span id="score-val" style="color: #fff;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>COINS</span>
+                <span id="coins-val" style="color: #ffdd00;">0</span>
+            </div>
+            <div class="stat-pill">
+                <span>LIVES</span>
+                <span id="lives-val" style="color: #00ff88;">3</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="platformer-canvas"></canvas>
+            <div id="overlay-screen" class="overlay-screen">
+                <h2 id="overlay-title" class="overlay-title start">SUPER RETRO JUMP</h2>
+                <p id="overlay-subtitle" style="color: var(--text-dim);">Run, leap over pipes, smash ? blocks & reach the flagpole!</p>
+                <button id="start-btn" class="btn">START RUN</button>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>A</kbd>/<kbd>D</kbd> Run</span>
+            <span><kbd>&uarr;</kbd> or <kbd>W</kbd> or <kbd>Space</kbd> Jump</span>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="mob-btn" id="mob-left">&larr; Left</button>
+            <button class="mob-btn" id="mob-jump">&#9650; Jump</button>
+            <button class="mob-btn" id="mob-right">Right &rarr;</button>
+        </div>
+    </div>
+
+    <script src="../../js/arcade-audio.js"></script>
+    <script src="platformer.js"></script>
+</body>
+</html>

@@ -91,6 +91,28 @@
             highScoreKey: null
         },
         {
+            id: 'conan-barbarian',
+            title: 'Conan: Hyborian Slayer',
+            category: 'action',
+            badge: 'Action / Platformer',
+            mode: '1 Player',
+            icon: '⚔️',
+            path: 'games/conan-barbarian/index.html',
+            description: 'Conan barbarian side-scrolling hack & slash combat through Stygian ruins with swords, blood, and boss battles.',
+            highScoreKey: null
+        },
+        {
+            id: 'retro-platformer',
+            title: 'Super Retro Jump',
+            category: 'action',
+            badge: '2D Platformer',
+            mode: '1 Player',
+            icon: '🍄',
+            path: 'games/retro-platformer/index.html',
+            description: 'Classic 2D jump & run platformer with pipes, mystery ? blocks, floating coins, enemy stomping, and flagpole.',
+            highScoreKey: null
+        },
+        {
             id: '2048',
             title: '2048 Neon',
             category: 'puzzle',
@@ -246,11 +268,8 @@
         renderGames();
     }
 
-    // Modal controls
+    // Modal controls - Only close via explicit Close button or Escape key (prevent accidental click outside)
     btnCloseModal.addEventListener('click', closePlayer);
-    playerModal.addEventListener('click', (e) => {
-        if (e.target === playerModal) closePlayer();
-    });
 
     btnFullscreen.addEventListener('click', () => {
         if (!document.fullscreenElement) {
